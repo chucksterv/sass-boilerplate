@@ -1,0 +1,9 @@
+@use "functions" as *;
+
+$fs-regular: 1rem;
+$fs-heading: clamp(1.5rem, 7.25vw, 3.25rem);
+
+$fw-400: 400;
+$fw-500: 500;
+
+$ff-default: sans-serif;

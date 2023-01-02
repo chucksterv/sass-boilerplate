@@ -1,0 +1,6 @@
+@use "../abstracts/" as *;
+
+.button {
+  &:is(:hover, :focus) {
+  }
+}

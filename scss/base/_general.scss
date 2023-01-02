@@ -1,1 +1,6 @@
 @use "../abstracts/" as *;
+
+body {
+  @include mq(md) {
+  }
+}
