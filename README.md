@@ -17,3 +17,4 @@ The file currently contains the following.
   - A mixin that takes in a size or a breakpoint for media queries
 - The following utility classes
   - A function that takes in the colors from the color map and creats a text color and a background color class for each one of the colors.
+  - A SR-Only class to be added to SR only elements.
