@@ -18,3 +18,9 @@ The file currently contains the following.
 - The following utility classes
   - A function that takes in the colors from the color map and creats a text color and a background color class for each one of the colors.
   - A SR-Only class to be added to SR only elements.
+  - A Display: None class to be used.
+
+Changes
+
+- Changed name from scss to sass.
+- Display None util class.
