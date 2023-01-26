@@ -1,9 +1,15 @@
-@use "functions" as *;
-
 $font-weights: (
   regular: 400,
   semi-bold: 500,
   bold: 700,
+);
+
+$font-sizes: (
+  400: 1rem,
+  500: 1.5rem,
+  600: 2rem,
+
+  regular: 400,
 );
 
 $fs-regular: 1rem;

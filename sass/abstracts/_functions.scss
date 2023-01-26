@@ -1,6 +1,7 @@
 @use "sass:math";
 @use "sass:map";
 @use "colors" as *;
+@use "type" as *;
 
 //Converts px to rem
 @function rem($pxValue) {
@@ -26,5 +27,14 @@
     @return map.get($colors, $category, $variant);
   } @else {
     @error '$colors does not have that color!';
+  }
+}
+
+//Returns a font-weight from the map
+@function fw($variant) {
+  @if map.has-key($font-weights, $variant) {
+    @return map.get($font-weights, $variant);
+  } @else {
+    @error '$Font weight is not defined';
   }
 }
