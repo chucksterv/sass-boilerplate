@@ -19,8 +19,10 @@ The file currently contains the following.
   - A function that takes in the colors from the color map and creats a text color and a background color class for each one of the colors.
   - A SR-Only class to be added to SR only elements.
   - A Display: None class to be used.
+  - A function that takes values from the font-weights map and creats a fw class for each value present.
 
 Changes
 
 - Changed name from scss to sass.
 - Display None util class.
+- fw util classes.
