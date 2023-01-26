@@ -1,5 +1,11 @@
 @use "functions" as *;
 
+$font-weights: (
+  regular: 400,
+  semi-bold: 500,
+  bold: 700,
+);
+
 $fs-regular: 1rem;
 $fs-heading: clamp(1.5rem, 7.25vw, 3.25rem);
 
