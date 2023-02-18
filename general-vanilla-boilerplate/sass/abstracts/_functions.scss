@@ -1,0 +1,59 @@
+@use "sass:math";
+@use "sass:map";
+@use "colors" as *;
+@use "type" as *;
+@use "sizes" as *;
+
+//Converts px to rem
+@function rem($pxValue) {
+  @if math.unit($pxValue) == px {
+    @return #{math.div($pxValue, 16px)}rem;
+  } @else {
+    @error "Please enter a pixel value";
+  }
+}
+
+//Converts px to em
+@function em($pxValue) {
+  @if math.unit($pxValue) == px {
+    @return #{math.div($pxValue, 16px)}em;
+  } @else {
+    @error "Please enter a pixel value";
+  }
+}
+
+//Returns a color from the colors map
+@function clr($category, $variant) {
+  @if map.has-key($colors, $category, $variant) {
+    @return map.get($colors, $category, $variant);
+  } @else {
+    @error '$colors does not have that color!';
+  }
+}
+
+//Returns a font-weight from the map
+@function fw($variant) {
+  @if map.has-key($font-weights, $variant) {
+    @return map.get($font-weights, $variant);
+  } @else {
+    @error '$Font weight is not defined';
+  }
+}
+
+//Returns a font-size from the map
+@function fs($variant) {
+  @if map.has-key($font-sizes, $variant) {
+    @return map.get($font-sizes, $variant);
+  } @else {
+    @error '$Font size is not defined';
+  }
+}
+
+//Returns a size from the map
+@function size($variant) {
+  @if map.has-key($sizes, $variant) {
+    @return map.get($sizes, $variant);
+  } @else {
+    @error '$Size is not defined';
+  }
+}

@@ -1,0 +1,8 @@
+@use "../abstracts/" as *;
+
+//Creates a utility class for all font-weights in the font-weight map
+@each $variant, $value in $font-weights {
+  .fw-#{$variant} {
+    font-weight: $value;
+  }
+}
