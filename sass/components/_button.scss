@@ -1,1 +1,25 @@
 @use "../abstracts/" as *;
+
+.button {
+  cursor: pointer;
+  display: inline-flex;
+  border-radius: 100vmax;
+  border: none;
+  padding: size(3) size(6);
+  background-color: clr(accent, 400);
+  color: clr(neutral, 200);
+  font-weight: fw(bold);
+  transition: 150ms background-color ease-in-out, 150ms color ease-in-out;
+  box-shadow: 0 1.25em 1em -1em clr(accent, 400);
+
+  &:is(:hover, :focus) {
+  }
+
+  &[data-type="inverted"] {
+    &:is(:hover, :focus) {
+    }
+  }
+
+  &[data-glow="no-glow"] {
+  }
+}

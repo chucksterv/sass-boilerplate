@@ -6,16 +6,9 @@ $font-weights: (
 
 $font-sizes: (
   400: 1rem,
-  500: 1.5rem,
-  600: 2rem,
-
-  regular: 400,
+  500: 1.125rem,
+  600: 1.875rem,
+  700: 2.5rem,
 );
 
-$fs-regular: 1rem;
-$fs-heading: clamp(1.5rem, 7.25vw, 3.25rem);
-
-$fw-400: 400;
-$fw-500: 500;
-
-$ff-default: sans-serif;
+$ff-default: "Be Vietnam Pro", sans-serif;

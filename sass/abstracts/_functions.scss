@@ -2,6 +2,7 @@
 @use "sass:map";
 @use "colors" as *;
 @use "type" as *;
+@use "sizes" as *;
 
 //Converts px to rem
 @function rem($pxValue) {
@@ -36,5 +37,23 @@
     @return map.get($font-weights, $variant);
   } @else {
     @error '$Font weight is not defined';
+  }
+}
+
+//Returns a font-size from the map
+@function fs($variant) {
+  @if map.has-key($font-sizes, $variant) {
+    @return map.get($font-sizes, $variant);
+  } @else {
+    @error '$Font size is not defined';
+  }
+}
+
+//Returns a size from the map
+@function size($variant) {
+  @if map.has-key($sizes, $variant) {
+    @return map.get($sizes, $variant);
+  } @else {
+    @error '$Size is not defined';
   }
 }

@@ -32,3 +32,26 @@
     @error "Not a valid input. Either choose a keyword or a numerical unit.";
   }
 }
+
+@mixin mqmax($size) {
+  @if map.has-key($breakpoints, $size) {
+    $breakpoint: map-get($breakpoints, $size);
+    @media screen and (max-width: $breakpoint) {
+      @content;
+    }
+  } @else if meta.type-of($size) == number {
+    @if math.unit($size) == px {
+      @media screen and (max-width: em($size)) {
+        @content;
+      }
+    } @else if math.is-unitless($size) {
+      @error "Please enter a unit along with the number";
+    } @else {
+      @media screen and (max-width: $size) {
+        @content;
+      }
+    }
+  } @else {
+    @error "Not a valid input. Either choose a keyword or a numerical unit.";
+  }
+}

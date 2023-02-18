@@ -3,6 +3,7 @@
 
 $breakpoints: (
   sm: 35em,
-  md: em(600px),
-  lg: em(1440px),
+  md-midpoint: 30em,
+  md: 50em,
+  lg: 60em,
 );

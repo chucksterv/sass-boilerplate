@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+.flow :not(:first-child) {
+  $flow-spacer: 3em;
+
+  margin-top: var(--flow-spacer, $flow-spacer);
+}

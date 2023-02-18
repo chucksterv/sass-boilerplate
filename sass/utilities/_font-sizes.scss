@@ -1,0 +1,8 @@
+@use "../abstracts/" as *;
+
+//Creates a utility class for all font-sizes in the font-sizes map
+@each $variant, $value in $font-sizes {
+  .fs-#{$variant} {
+    font-size: $value;
+  }
+}
